@@ -1,5 +1,5 @@
 ## react study
-https://yoohl.github.io/react-app
+https://yoohl.github.io/react-study/
 
 ### 6/15
 - 리액트 라우터 

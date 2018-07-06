@@ -78,40 +78,21 @@ class Form extends Component {
     userId: '',
     userPass: '',
     name: '',
-    inputInfoGender: '',
-    number: 0
+    inputInfoGender: ''
   }
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+        [e.target.name]: e.target.value
     })
   }
-  
-  handleIncrease = (e) => {
-    e.preventDefault();
-    this.setState({
-      number: this.state.number + 1
-    })
-  }
-  handleDecrease = (e) => {
-    e.preventDefault();
-    this.setState({
-      number: this.state.number -1
-    })
-  }
-
   handleSubmit = (e) => {
-    // 페이지 리로딩 방지
     e.preventDefault();
-    // 상태값을 onCreate를 통하여 부모에게 전달
     this.props.onCreate(this.state);
-    // 상태 초기화
     this.setState({
         userId:'',
         userPass:'',
         name: '',
-        inputInfoGender: '',
-        number: 0
+        inputInfoGender: ''
     })
   }
   render() {
@@ -119,9 +100,6 @@ class Form extends Component {
       <Wrapper>
         <form onSubmit={this.handleSubmit}>
           <Title>회원가입</Title>
-          <div>값: {this.state.number} </div>
-          <button onClick={this.handleIncrease}>+</button>
-          <button onClick={this.handleDecrease}>-</button>
           <FormBox>
             <dt>아이디</dt>
             <dd>

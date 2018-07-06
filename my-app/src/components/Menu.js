@@ -30,8 +30,8 @@ const Nav = styled.div`
   }
 `
 
+// 함수형 컴포넌트 
 const Menu = () => {
-  
   return (
     <Nav>
       <ul>
